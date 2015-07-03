@@ -32,6 +32,7 @@ class downloads(SGMLParser):                  #分析HTML源代码
 def downloadvideo(num,url,name):
     videourl = url
     url = 'http://www.flvcd.com/parse.php?kw=' + videourl + '&flag=one&format=super'
+    print url
      
     user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'       #伪装浏览器请求数据
     headers = { 'User-Agent' : user_agent }
