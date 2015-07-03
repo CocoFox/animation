@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+import re
+
+def renum():
+    name = '怪盗小丑 第2期'
+    rename = re.compile(r'\d+期$')
+    a = rename.findall(name)
+    if a[0] == '2期':
+        newname = name.replace(a[0],'二季')
+    elif a[0] == '2期':
+        newname = name.replace(a[0],'二季')
+    elif a[0] == '2期':
+        newname = name.replace(a[0],'二季')
+    elif a[0] == '2期':
+        newname = name.replace(a[0],'二季')
+    elif a[0] == '2期':
+        newname = name.replace(a[0],'二季')
+    elif a[0] == '2期':
+        newname = name.replace(a[0],'二季')
+    elif a[0] == '2期':
+        newname = name.replace(a[0],'二季')
+    elif a[0] == '2期':
+        newname = name.replace(a[0],'二季')
+    elif a[0] == '2期':
+        newname = name.replace(a[0],'二季')
+    elif a[0] == '2期':
+        newname = name.replace(a[0],'二季')
+    elif a:
+        newname = name.replace(a[0],'二季')
+    else:
+        pass
+
+    return newname
+
+if __name__ == '__main__':
+    renum()
