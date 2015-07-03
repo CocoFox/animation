@@ -308,15 +308,12 @@ class zhuifanson(QDialog, Ui_sontitle):
     def download(self):
         startnum = self.startnum.text()
         endnum = self.endnum.text()
-        print startnum,endnum
         name = unquote(NAME)
         if startnum == '':
             startnum = self.dname[self.n-13][0]
         if endnum == '':
             endnum = self.dname[self.n-1][0]
         downloadlist = []
-        print name,self.n
-        print startnum,endnum
         for a in range(int(startnum),int(endnum)+1):
             self.loginfo.append('>start download %dth of (%s to %s)<\n' %(a,startnum,endnum))
             self.loginfo.append('downloading %dth,please wait......\n' %a)

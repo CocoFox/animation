@@ -321,9 +321,7 @@ class zhuifanson(QDialog, Ui_sontitle):
             self.loginfo.append('>start download %dth of (%s to %s)<\n' %(a,startnum,endnum))
             self.loginfo.append('downloading %dth,please wait......\n' %a)
             QApplication.processEvents()           #立即显示输出的内容
-            #vb = self.loginfo.verticalScrollBar()              #滚动条置顶
-            #vb.setValue(1) 
-            self.loginfo.moveCursor(QtGui.QTextCursor.End)
+            self.loginfo.moveCursor(QtGui.QTextCursor.End)  #光标置底
             downloadvideo(a,self.dname[a-1][1],name)
             self.loginfo.append('>%dth was downloaded<\n' %a)
             self.loginfo.moveCursor(QtGui.QTextCursor.End)
