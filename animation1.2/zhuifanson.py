@@ -341,7 +341,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         global NAME
         name = unquote(NAME)
         l = time.strftime("%Y-%m-%d %A %X", time.localtime())      #获取本地时间
-        hlist = l + '\n' + name + self.dname[self.n-a][0] + '\n'
+        hlist = l + '\n' + name + str(self.dname[self.n-a][0]) + '\n'
         with open('history','a') as f:
             f.write(hlist)
 

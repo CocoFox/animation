@@ -93,6 +93,10 @@ def bilibili(sname):
     else:
         m.append(name)
     m[0] = quote(m[0])
+    if name == '无头骑士异闻录×2 转':
+        s = name
+    if name == '无头骑士异闻录×2 承':
+        s = name
 
 
     url = 'http://www.bilibili.com/sp/'+m[0]
