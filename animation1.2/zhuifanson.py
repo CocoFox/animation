@@ -151,7 +151,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(1)
         webbrowser.open(self.dname[self.n-1][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -161,7 +161,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(2)
         webbrowser.open(self.dname[self.n-2][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -171,7 +171,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(3)
         webbrowser.open(self.dname[self.n-3][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -181,7 +181,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(4)
         webbrowser.open(self.dname[self.n-4][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -191,7 +191,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(5)
         webbrowser.open(self.dname[self.n-5][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -201,7 +201,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(6)
         webbrowser.open(self.dname[self.n-6][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -211,7 +211,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(7)
         webbrowser.open(self.dname[self.n-7][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -221,7 +221,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(8)
         webbrowser.open(self.dname[self.n-8][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -231,7 +231,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(9)
         webbrowser.open(self.dname[self.n-9][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -241,7 +241,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(10)
         webbrowser.open(self.dname[self.n-10][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -251,7 +251,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(11)
         webbrowser.open(self.dname[self.n-11][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -261,7 +261,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(12)
         webbrowser.open(self.dname[self.n-12][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -271,7 +271,7 @@ class zhuifanson(QDialog, Ui_sontitle):
         """
         Slot documentation goes here.
         """
-        self.historylist()
+        self.historylist(13)
         webbrowser.open(self.dname[self.n-13][1])
         # TODO: not implemented yet
         raise NotImplementedError
@@ -337,11 +337,11 @@ class zhuifanson(QDialog, Ui_sontitle):
             self.loginfo.append('>%dth was downloaded<\n' %a)
             self.loginfo.moveCursor(QtGui.QTextCursor.End)
 
-    def historylist(self):
+    def historylist(self,a):
         global NAME
         name = unquote(NAME)
         l = time.strftime("%Y-%m-%d %A %X", time.localtime())      #获取本地时间
-        hlist = l + '\n' + name + str(self.n) + '\n'
+        hlist = l + '\n' + name + self.dname[self.n-a][0] + '\n'
         with open('history','a') as f:
             f.write(hlist)
 
