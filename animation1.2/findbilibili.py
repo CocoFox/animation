@@ -97,6 +97,8 @@ def bilibili(sname):
         s = name
     if name == '无头骑士异闻录×2 承':
         s = name
+    if m[0] == '女高网球部':
+        m[0] == '网球并不可笑嘛'
 
 
     url = 'http://www.bilibili.com/sp/'+m[0]
