@@ -51,7 +51,7 @@ def catchcode():
         strmonth = '07'
     else:
         strmonth = '10'
-    url = 'http://www.xydm.net/cartoon/'+year+'/'+year+strmonth+'/index.php'
+    url = 'http://www.xydm.net/cartoon/zt/'+year+strmonth+'/index.php'
     user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'       #伪装浏览器请求数据
     headers = { 'User-Agent' : user_agent }
     request = urllib2.Request(url, headers=headers)
